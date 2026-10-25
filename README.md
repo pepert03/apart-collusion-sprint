@@ -16,9 +16,16 @@ suppress collusion, and which only push it underground.
 - [x] Pilot: 3 sessions x 5 conditions x 2 models, in `data/pilot/` (excluded
       from confirmatory analysis; it shaped the protocol and metric, see the
       preregistration).
-- [ ] Confirmatory run: `bash scripts/run_all.sh` -> `data/<model>/`, `data/results.txt`.
-- [ ] Report + submission. **Due Sun Oct 25, 23:59 AoE**: report <= 1,500 words
-      plus this repo **public**. Judged on rigour, novelty, communication.
+- [x] Confirmatory run (Oct 25): 250 sessions, 0 dropped. Trajectories in
+      `data/qwen3-8b/`, `data/qwen3-32b/`; full table in `data/results.txt`.
+- [x] Report: `report/report.md` (Figure 1: `report/fig1.png`).
+- [ ] Submission. **Due Sun Oct 25, 23:59 AoE**: report <= 1,500 words plus
+      this repo **public**.
+
+**Headline (Qwen3-32B):** announced audits cut overt collusion from 96% to 4%
+of sessions while sustained (C,C) stayed at 96% and reward was unchanged:
+agents switched to messages like "I will act independently as required by the
+protocol". Only the outcome penalty changed behaviour. See the report.
 
 ## Setting up on a new machine
 
@@ -72,6 +79,14 @@ python analysis/judge_all.py --files data/smoke/*.jsonl --judge-model random-stu
 python analysis/bootstrap.py --files data/smoke/*.judged.jsonl
 ```
 
+Reproduce the report numbers and figure from the committed data (no model needed):
+
+```bash
+python analysis/bootstrap.py --files data/qwen3-*/*.judged.jsonl
+python analysis/explore.py   --files data/qwen3-*/*.judged.jsonl
+python analysis/plot.py      --files data/qwen3-*/*.judged.jsonl --out report/fig1.png
+```
+
 Confirmatory run (2 models x 5 conditions x 25 sessions x 20 rounds, then the
 judge pass and the analysis). Resumable: re-running skips finished sessions.
 
@@ -115,9 +130,9 @@ instead of writing fake output.
 
 ```
 src/        game, agents, interventions, metrics, run.py (CLI)
-analysis/   judge_all.py, bootstrap.py
+analysis/   judge_all.py, bootstrap.py, explore.py, plot.py
 infra/      modal_vllm.py (model servers)
 scripts/    setup_machine.sh, run_all.sh
-data/pilot/ pilot trajectories (raw + judged)
-report/     outline.md
+data/        pilot/ and confirmatory trajectories (raw + judged), results.txt
+report/     report.md, fig1.png, outline.md
 ```

@@ -2,3 +2,4 @@ __pycache__/
 *.pyc
 .env
 data/smoke/
+run_all.log

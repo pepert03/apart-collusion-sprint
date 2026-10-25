@@ -1,2 +1,3 @@
-# minimal; LLM client added when the backend is chosen
+# Harness is stdlib only. Analysis: numpy, matplotlib. Infra: modal (setup_machine.sh installs it).
 numpy>=1.26
+matplotlib>=3.8
