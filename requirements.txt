@@ -1,0 +1,2 @@
+# minimal; LLM client added when the backend is chosen
+numpy>=1.26
