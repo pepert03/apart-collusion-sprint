@@ -8,7 +8,7 @@ suppress collusion, and which only push it underground.
 
 - Pitch: `experiment-proposal.md`
 - Analysis plan, **frozen Oct 21 before the confirmatory run**: `preregistration.md`
-- Report outline (1,500 words): `report/outline.md`
+- Report outline (superseded by `report/report.md`): `report/outline.md`
 
 ## Status
 
@@ -18,9 +18,13 @@ suppress collusion, and which only push it underground.
       preregistration).
 - [x] Confirmatory run (Oct 25): 250 sessions, 0 dropped. Trajectories in
       `data/qwen3-8b/`, `data/qwen3-32b/`; full table in `data/results.txt`.
-- [x] Report: `report/report.md` (Figure 1: `report/fig1.png`).
-- [ ] Submission. **Due Sun Oct 25, 23:59 AoE**: report <= 1,500 words plus
-      this repo **public**.
+- [x] Report: `report/report.md` (Figure 1: `report/fig1.png`; appendices: Limitations, Dual-Use, full results table).
+- [ ] Submission. **Due Sun Oct 25, 23:59 AoE (Mon Oct 26, 12:59 CET)**: report 4-8 pages
+      on the official template plus this repo **public**.
+
+## Provenance
+
+The harness, pilot, and preregistration predate the sprint (preregistration frozen Oct 21, 2026); the confirmatory run, judge pass, analysis, figure, and report were produced during the sprint (Oct 23-25, 2026).
 
 **Headline (Qwen3-32B):** announced audits cut overt collusion from 96% to 4%
 of sessions while sustained (C,C) stayed at 96% and reward was unchanged:

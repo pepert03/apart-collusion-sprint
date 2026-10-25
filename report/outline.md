@@ -1,7 +1,7 @@
-# Report outline (1,500 words max, excluding references)
+# Report outline (superseded by report/report.md; current rule: 4-8 pages on the official template, excluding references/appendices)
 
 Target the judging criteria: rigour, novelty/interest, communication.
-Word budget below; count words before submitting.
+Word budget below is planning only; the submitted report follows the template's page limit.
 
 ## 1. Title + abstract (~120)
 
