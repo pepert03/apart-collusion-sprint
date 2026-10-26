@@ -8,7 +8,7 @@ suppress collusion, and which only push it underground.
 
 - Pitch: `experiment-proposal.md`
 - Analysis plan, **frozen Oct 21 before the confirmatory run**: `preregistration.md`
-- Report outline (superseded by `report/report.md`): `report/outline.md`
+- Submitted report: `report/report.pdf` (built from `report/report.html`, the official template; text also in `report/report.md`)
 
 ## Status
 
@@ -138,5 +138,5 @@ analysis/   judge_all.py, bootstrap.py, explore.py, plot.py
 infra/      modal_vllm.py (model servers)
 scripts/    setup_machine.sh, run_all.sh
 data/        pilot/ and confirmatory trajectories (raw + judged), results.txt
-report/     report.md, fig1.png, outline.md
+report/     report.pdf (submitted), report.html (its source), report.md, fig1.svg/.png, fonts/
 ```

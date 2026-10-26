@@ -3,3 +3,7 @@ __pycache__/
 .env
 data/smoke/
 run_all.log
+
+# Local, not part of the project
+*.msg
+report/Copia de *
