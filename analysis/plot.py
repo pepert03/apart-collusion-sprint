@@ -99,7 +99,7 @@ def main() -> None:
              color=INK_2, fontsize=7.5)
     fig.tight_layout(rect=(0, 0.03, 1, 0.95))
     os.makedirs(os.path.dirname(args.out) or ".", exist_ok=True)
-    fig.savefig(args.out, dpi=200, facecolor=SURFACE)
+    fig.savefig(args.out, dpi=300, facecolor=SURFACE); fig.savefig(os.path.splitext(args.out)[0] + ".svg", facecolor=SURFACE)
     print(f"wrote {args.out}")
 
 
